@@ -4,8 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About
-
 ![Picture of me](/assets/img/about-pic.jpg)
 
 Hey there, I'm Joshua Cleek, reaching out from the heart of the Kansas City metro. By day, I'm donning the hat of a Solutions Delivery Engineer in the healthcare industry, diving deep into the fascinating worlds of Linux, automation and virtualization.
