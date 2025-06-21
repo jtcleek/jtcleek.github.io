@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<h1>About</h1>
+
+<p>
+Hello! I'm Joshua, operating out of the Kansas City metro.</p>
+
+<p>
+By day, I work as an Application Delivery Engineer in the healthcare industry, with a strong focus on UNIX systems. I also contribue to DevOps and automation initiatives across my team.</p>
+
+<p>
+By night, I'm a husband, father, and lifelong tech enthusiast. I enjoy traveling with my family, trying new beers, and spinning up services in my ever-evolving homelab.  <a href="about/">(more)</a>
+</p>
+<br/>
+
+<h1>Latest posts</h1>
+
+<div class="posts-list">
+{{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+
+{{ end }}
